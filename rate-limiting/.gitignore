@@ -1,0 +1,41 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# VSCode (optional)
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.env
+
+# Java
+*.class
+
+# Maven (if used with multi-module)
+target/
+
+# Test reports
+/test-output/
+/surefire-reports/
+
+
+# Others
+*.swp
+*.bak
+*.tmp
+
