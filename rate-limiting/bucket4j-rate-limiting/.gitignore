@@ -4,7 +4,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 
 # IntelliJ
-.idea/
+bucket4j-rate-limiting/.idea/
 *.iml
 *.iws
 out/
