@@ -1,6 +1,8 @@
 package com.stury.redisstudy.test.service
 
+import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.stury.redisstudy.test.dto.HashTest
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.stereotype.Service
 
@@ -9,8 +11,8 @@ class RedisHashExampleService(
     private val redisTemplate: RedisTemplate<String, Any>,
     private val objectMapper: ObjectMapper
 ) {
-    fun hset(key: String, obj: Any) {
-        val map = objectMapper.convertValue(obj, Map::class.java)
+    fun hset(key: String, obj: HashTest) {
+        val map: Map<String, Any> = objectMapper.convertValue(obj, object : TypeReference<Map<String, Any>>() {})
         redisTemplate.opsForHash<String, Any>().putAll(key, map)
     }
 

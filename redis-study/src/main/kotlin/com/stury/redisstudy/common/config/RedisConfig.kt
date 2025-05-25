@@ -33,12 +33,15 @@ class RedisConfig {
             registerKotlinModule()
         }
 
-        val template = RedisTemplate<String, Any>()
-        template.setConnectionFactory(redisConnectionFactory())
-        template.keySerializer = StringRedisSerializer()
-        template.valueSerializer = GenericJackson2JsonRedisSerializer(mapper)
-        return template
+        return RedisTemplate<String, Any>().apply {
+            setConnectionFactory(redisConnectionFactory())
+            keySerializer = StringRedisSerializer()
+            valueSerializer = GenericJackson2JsonRedisSerializer(mapper)
+            hashKeySerializer = StringRedisSerializer()
+            hashValueSerializer = GenericJackson2JsonRedisSerializer(mapper)
+        }
     }
+
 
     @Bean
     fun objectMapper(): ObjectMapper = jacksonObjectMapper().registerKotlinModule()
