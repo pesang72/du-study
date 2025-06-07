@@ -1,4 +1,4 @@
-package com.stury.redisstudy.leaderboard.dto
+package com.stury.redisstudy.ch4.leaderboard.dto
 
 data class ScoreRequest(
     val userId: String,

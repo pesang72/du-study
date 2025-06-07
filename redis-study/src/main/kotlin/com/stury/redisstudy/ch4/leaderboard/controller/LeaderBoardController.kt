@@ -1,8 +1,8 @@
-package com.stury.redisstudy.leaderboard.controller
+package com.stury.redisstudy.ch4.leaderboard.controller
 
-import com.stury.redisstudy.leaderboard.dto.RankResponse
-import com.stury.redisstudy.leaderboard.dto.ScoreRequest
-import com.stury.redisstudy.leaderboard.service.LeaderboardService
+import com.stury.redisstudy.ch4.leaderboard.dto.RankResponse
+import com.stury.redisstudy.ch4.leaderboard.dto.ScoreRequest
+import com.stury.redisstudy.ch4.leaderboard.service.LeaderboardService
 import org.springframework.web.bind.annotation.*
 
 @RestController

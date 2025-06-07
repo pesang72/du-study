@@ -1,6 +1,6 @@
-package com.stury.redisstudy.leaderboard.service
+package com.stury.redisstudy.ch4.leaderboard.service
 
-import com.stury.redisstudy.leaderboard.dto.RankResponse
+import com.stury.redisstudy.ch4.leaderboard.dto.RankResponse
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.stereotype.Service
 
