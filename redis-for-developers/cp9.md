@@ -3,8 +3,6 @@
 ## Sentinel이란?
 Redis Sentinel은 고가용성(High Availability)을 제공하는 분산 모니터링 시스템입니다. 단순한 마스터-슬레이브 복제에서 한 단계 더 나아가, 장애 상황을 자동으로 감지하고 복구하는 자동화된 운영 도구입니다.
 
-## 핵심 개념 상세
-
 ### Sentinel의 4가지 핵심 역할
 
 **1. 모니터링 (Monitoring)**
@@ -29,7 +27,7 @@ Redis Sentinel은 고가용성(High Availability)을 제공하는 분산 모니�
 - 서비스 디스커버리 역할 수행
 - 예: Spring Boot 애플리케이션이 Sentinel에 "현재 마스터 주소가 뭐야?"라고 물어보면 실시간 주소 반환
 
-### 장애 감지 메커니즘 상세
+### 장애 감지 메커니즘
 
 **주관적 다운 (SDOWN - Subjectively Down)**
 - 개별 Sentinel이 down-after-milliseconds 시간 동안 응답 없음을 감지
@@ -49,7 +47,7 @@ Redis Sentinel은 고가용성(High Availability)을 제공하는 분산 모니�
 - 예: Sentinel 3개 → 쿼럼 2, Sentinel 5개 → 쿼럼 3
 - 잘못된 예: Sentinel 2개에서 쿼럼 1 → 네트워크 분할 시 두 개가 각각 페일오버 시도 가능
 
-## 페일오버 과정 상세
+## 페일오버 과정
 
 **1. 장애 감지 (Detection)**
 - Sentinel들이 마스터에 ping 전송 → 응답 없음
